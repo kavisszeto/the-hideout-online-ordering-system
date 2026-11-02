@@ -141,7 +141,7 @@ A detailed project documentation in Traditional Chinese (繁體中文) is also a
 ## Project Information
 
 - **Project Type:** Academic / Individual Project
-- **Course:** Programming Project
+- **Course:** Computer Programming
 - **Institution:** National Kaohsiung University of Science and Technology (NKUST)
 - **Completion Date:** January 2023
 

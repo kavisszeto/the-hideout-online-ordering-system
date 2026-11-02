@@ -38,6 +38,8 @@ Customers can customise their coffee by choosing its size, temperature, milk typ
 
 - **Programming Language:** Java
 - **GUI Framework:** JavaFX
+- **UI Design Tool:** Scene Builder
+- **UI Markup:** FXML
 
 ## Screenshots
 

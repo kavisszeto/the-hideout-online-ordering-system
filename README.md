@@ -1,38 +1,44 @@
-# The Hideout – Café Online Ordering System
+# The Hideout – Online Ordering System
 
-A JavaFX-based ordering application designed for a fictional café called **The Hideout**. The application allows customers to customise coffee, select other menu items, manage a shopping cart, and review their order before proceeding to the payment step.
+A JavaFX-based online ordering system developed for a fictional coffee shop. The application allows customers to customise coffee orders, select food items, manage their shopping cart, and review order details through a graphical user interface.
 
 ## Project Overview
 
-The Hideout is a fictional café project developed as a final JavaFX application for a programming course. It was designed to provide a simple ordering experience and help customers place orders without waiting at the counter.
+The Hideout is a fictional coffee shop online ordering system developed as an individual academic project using Java and JavaFX.
 
-Customers can customise their coffee by choosing its size, temperature, milk type, and available options. They can also select other menu items, review the items in their shopping cart, and enter their name and telephone number for order identification during collection.
+The application provides an interactive ordering experience, allowing customers to customise beverages, select additional food items, and review their orders before confirmation. The interface was designed using JavaFX Scene Builder, with FXML defining the layout and Java controllers handling user interactions.
 
 ## Key Features
 
 ### 1. Coffee Customisation
-- Choose from different coffee sizes.
-- Select hot or cold options.
-- Choose a milk type where applicable.
-- Select available customisation options, such as whipped cream and decaffeinated coffee.
-- Display selected coffee details and updated prices.
+
+- Choose from different coffee options, including Americano, Cappuccino, Caramel Latte, and Mocha.
+- Select coffee sizes, including Small, Medium, and Large.
+- Choose between hot and iced beverages.
+- Customise milk options, including Low-Fat Milk, Skim Milk, Soy Milk, and Almond Milk.
+- Add whipped cream or select decaffeinated coffee.
+- Automatically calculate prices based on selected options.
 
 ### 2. Food and Beverage Selection
-- Browse additional menu items, including drinks and food, through their images.
-- Increase or decrease the quantity of each item.
-- View selected items in the shopping cart.
+
+- Browse additional items, including Strawberry Smoothie, Sandwiches, and Carrot Cake.
+- Add selected items to the order.
+- Remove items from the selection when necessary.
 
 ### 3. Shopping Cart and Order Confirmation
-- Review selected coffees and other menu items in the shopping cart.
-- Display item quantities, subtotals, and the order total.
-- Enter the customer's name and telephone number for order identification during collection.
-- Select a payment method and review the order information before proceeding.
-- Clear the current selections when changes are needed.
 
-### 4. Input Validation and Error Messages
-- Display an error message when a coffee option is not selected correctly.
-- Check that the customer's name and telephone number have been entered before order confirmation.
-- Show prompts to help customers correct incomplete or invalid information.
+- Display selected coffee and food items in the shopping cart.
+- Show item quantities and order totals.
+- Review order details before confirmation.
+- Enter customer information, including name and phone number.
+- Select a payment method.
+- Review the order summary before proceeding to the payment step.
+
+### 4. Input Validation
+
+- Validate required customer information before order confirmation.
+- Display warning messages when customer details are missing.
+- Apply selection rules to prevent invalid coffee customisation, such as selecting milk options for Americano.
 
 ## Technologies Used
 
@@ -40,36 +46,91 @@ Customers can customise their coffee by choosing its size, temperature, milk typ
 - **GUI Framework:** JavaFX
 - **UI Design Tool:** Scene Builder
 - **UI Markup:** FXML
+- **IDE:** Apache NetBeans
+
+## Application Structure
+
+The application follows a JavaFX FXML-based structure, separating the user interface, interaction logic, and ordering data.
+
+| File | Description |
+|---|---|
+| `JavaFX_IndividualProject.java` | Main application class responsible for launching the JavaFX application and loading the FXML layout. |
+| `FXMLDocument.fxml` | Defines the graphical user interface designed using Scene Builder. |
+| `FXMLDocumentController.java` | Handles user interactions and interface events. |
+| `Cafe.java` | Manages coffee and food options, pricing, customisation, and order calculations. |
+
+### Application Workflow
+
+1. Customers select coffee and food items.
+2. Coffee options are customised according to size, temperature, and additional preferences.
+3. Selected items and calculated prices are displayed in the shopping cart.
+4. Customers enter their details and select a payment method.
+5. The order information is presented for final review before proceeding to the payment step.
 
 ## Screenshots
 
-The following screenshots show the main ordering interface and the application's input validation messages.
+Screenshots below demonstrate the main interface and ordering functions of the application.
 
-### 1. Online Ordering Interface
+### Main Ordering Interface
 
 <p align="center">
   <img src="screenshots/ordering-system.png" width="600">
 </p>
 
-The main screen guides customers through coffee customisation and menu selection. It also displays the selected items, shopping cart, customer details, payment method, and order information for review.
+The main interface allows customers to select coffee and food items, customise beverages, and review their shopping cart.
 
-### 2. Input Validation and Error Messages
+### Input Validation
 
 <p align="center">
   <img src="screenshots/validation-messages.png" width="600">
 </p>
 
-The application displays error messages when required selections are missing or invalid. It also prompts customers to provide their name and telephone number before confirming the order.
+The application displays warning messages when required customer information is missing or when an invalid coffee customisation is selected.
+
+## How to Run
+
+### Prerequisites
+
+- Java JDK compatible with the project's configuration
+- Apache NetBeans IDE
+- JavaFX libraries
+- JavaFX Scene Builder
+
+### Setup Instructions
+
+**1. Download or clone the repository**
+
+Download the project files or clone this repository to your local machine.
+
+**2. Open the project in NetBeans**
+
+- Launch Apache NetBeans IDE.
+- Select `File` → `Open Project`.
+- Navigate to the downloaded project folder.
+- Open the entire project folder rather than individual Java files.
+
+**3. View or edit the interface**
+
+- Locate `FXMLDocument.fxml` in the project source folder.
+- Open the FXML file using JavaFX Scene Builder to view or modify the graphical interface.
+
+**4. Run the application**
+
+- The main application class is `javafx_individualproject.JavaFX_IndividualProject`.
+- Right-click the project in NetBeans and select **Run**, or press `F6`.
+- Ensure that the JavaFX libraries are correctly configured before running the application.
 
 ## What I Learned
 
 Through this project, I gained practical experience in:
 
-- Developing a desktop application interface using Java and JavaFX.
-- Creating an ordering flow with different selection steps and options.
-- Handling user input through interface controls such as combo boxes and text fields.
-- Updating item details, prices, and shopping cart information based on user selections.
-- Checking user input and displaying error messages when information is incomplete or invalid.
+- Developing desktop applications using Java and JavaFX.
+- Designing graphical user interfaces using Scene Builder and FXML.
+- Connecting FXML layouts with Java controller classes.
+- Handling user interactions and JavaFX event handling.
+- Implementing dynamic product customisation and price calculations.
+- Managing shopping cart selections and order information.
+- Implementing input validation and displaying error messages.
 
 ## Additional Documentation
 
@@ -80,10 +141,10 @@ A detailed project documentation in Traditional Chinese (繁體中文) is also a
 ## Project Information
 
 - **Project Type:** Academic / Individual Project
-- **Course:** Programming
+- **Course:** Programming Project
 - **Institution:** National Kaohsiung University of Science and Technology (NKUST)
-- **Completion Date:** 8 January 2023
+- **Completion Date:** January 2023
 
 ---
 
-*This project was developed for academic purposes as a demonstration of JavaFX application development and user input handling.*
+*This project was developed for academic purposes as a demonstration of JavaFX application development and interactive ordering system design.*

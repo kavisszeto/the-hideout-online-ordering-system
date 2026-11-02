@@ -136,7 +136,7 @@ Through this project, I gained practical experience in:
 
 A detailed project documentation in Traditional Chinese (繁體中文) is also available in Microsoft Word format.
 
-📄 [View Traditional Chinese Documentation](docs/The-Hideout-Documentation-zh-TW.docx)
+📄 [Download Traditional Chinese Documentation](docs/The-Hideout-Documentation-zh-TW.docx)
 
 ## Project Information
 

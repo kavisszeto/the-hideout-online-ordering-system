@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="1000.0" prefWidth="1200.0" style="-fx-background-color: BLANCHEDALMOND; -fx-border-color: SADDLEBROWN; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx_individualproject.FXMLDocumentController">
+   <children>
+      <Label layoutX="125.0" layoutY="26.0" text="The Hideout" textFill="#a42818">
+         <font>
+            <Font name="Copperplate" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="173.0" layoutY="75.0" text="Your Little Corner" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate Light" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="103.0" fitWidth="155.0" layoutX="454.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Coffee-Bean.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="displayDetail" editable="false" focusTraversable="false" layoutX="785.0" layoutY="66.0" prefHeight="383.0" prefWidth="359.0" promptText="Shows Here" style="-fx-border-color: SADDLEBROWN; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Light" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></TextArea>
+      <Label layoutX="96.0" layoutY="188.0" text="Steps">
+         <font>
+            <Font name="Copperplate" size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="230.0" text="Size:&#10;">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="sizeBox" layoutX="72.0" layoutY="255.0" prefHeight="31.0" prefWidth="153.0" style="-fx-border-width: 2; -fx-border-color: saddlebrown;" />
+      <Button fx:id="confirmBtn" layoutX="1021.0" layoutY="686.0" mnemonicParsing="false" onAction="#confirm" prefHeight="36.0" prefWidth="135.0" style="-fx-border-width: 2; -fx-border-color: saddlebrown;" text="Confirm">
+         <font>
+            <Font name="Copperplate" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="clearBtn" layoutX="1021.0" layoutY="733.0" mnemonicParsing="false" onAction="#clear" prefHeight="37.0" prefWidth="135.0" style="-fx-border-color: saddlebrown; -fx-border-width: 2;" text="Clear">
+         <font>
+            <Font name="Copperplate" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="74.0" layoutY="308.0" text="Hot or Cold?">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="306.0" text="2" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="789.0" layoutY="45.0" text="Coffee(s) Detail(s)" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="429.0" layoutY="135.0" text="Coffee">
+         <font>
+            <Font name="Copperplate" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="175.0" fitWidth="175.0" layoutX="522.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Capuccino.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="175.0" fitWidth="175.0" layoutX="288.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Americano.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="175.0" fitWidth="175.0" layoutX="521.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Mocha.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="175.0" fitWidth="175.0" layoutX="287.0" layoutY="456.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Caramel-Latte.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="291.0" layoutY="643.0" text="Caramel Latte $130" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="542.0" layoutY="378.0" text="Capuccino $120" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="cof1add" layoutX="565.0" layoutY="406.0" mnemonicParsing="false" onAction="#addCoffee" prefHeight="33.0" prefWidth="90.0" style="-fx-border-color: sienna; -fx-border-width: 2;" text="Add" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="cof2add" layoutX="335.0" layoutY="667.0" mnemonicParsing="false" onAction="#addCoffee" prefHeight="33.0" prefWidth="90.0" style="-fx-border-color: sienna; -fx-border-width: 2;" text="Add" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="307.0" layoutY="378.0" text="Americano $100" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="558.0" layoutY="643.0" text="Mocha $140" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="cof3add" layoutX="565.0" layoutY="667.0" mnemonicParsing="false" onAction="#addCoffee" prefHeight="33.0" prefWidth="90.0" style="-fx-border-color: sienna; -fx-border-width: 2;" text="Add" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="cof0add" layoutX="332.0" layoutY="406.0" mnemonicParsing="false" onAction="#addCoffee" prefHeight="33.0" prefWidth="90.0" style="-fx-border-color: sienna; -fx-border-width: 2;" text="Add" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate Bold" size="16.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="175.0" fitWidth="175.0" layoutX="86.0" layoutY="741.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Strawberry-Smoothie.jpeg" />
+         </image></ImageView>
+      <ImageView fitHeight="175.0" fitWidth="175.0" layoutX="521.0" layoutY="741.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Carrot-Cake.jpeg" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="hot" layoutX="71.0" layoutY="333.0" mnemonicParsing="false" selected="true" text="Hot" textFill="#6d3c1e" underline="true">
+         <font>
+            <Font name="Copperplate Bold" size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="tptGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="cold" layoutX="157.0" layoutY="333.0" mnemonicParsing="false" text="Cold" textFill="#6d3c1e" toggleGroup="$tptGroup" underline="true">
+         <font>
+            <Font name="Copperplate Bold" size="18.0" />
+         </font>
+      </RadioButton>
+      <Line endX="500.0" layoutX="170.0" layoutY="115.0" startX="-100.0" stroke="SADDLEBROWN" strokeWidth="5.0" />
+      <Label layoutX="29.0" layoutY="494.0" text="4" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="491.0" text="Customisations:&#10;">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="creamCheck" layoutX="73.0" layoutY="518.0" mnemonicParsing="false" text="Whipped Cream" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="16.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="decafCheck" layoutX="73.0" layoutY="551.0" mnemonicParsing="false" text="Decaffeinated&#10;+$10" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="16.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="28.0" layoutY="377.0" text="3" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="378.0" text="Type of Milk:&#10;">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="milkBox" layoutX="72.0" layoutY="407.0" prefHeight="31.0" prefWidth="153.0" style="-fx-border-width: 2; -fx-border-color: saddlebrown;" />
+      <Label layoutX="73.0" layoutY="449.0" text="Default as Whole Milk&#10;Ignore if order Americano&#10;" textFill="#b5353b">
+         <font>
+            <Font name="Copperplate" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="230.0" text="1" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="597.0" text="5" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="605.0" text="Press to Add &#10;Your Pesonalised Coffee &#10;">
+         <font>
+            <Font name="Copperplate" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="500.0" layoutX="170.0" layoutY="721.0" startX="-100.0" stroke="SADDLEBROWN" strokeWidth="5.0" />
+      <Label alignment="TOP_LEFT" layoutX="-12.0" layoutY="828.0" prefHeight="22.0" prefWidth="113.0" rotate="270.0" text="Other">
+         <font>
+            <Font name="Copperplate" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="175.0" fitWidth="175.0" layoutX="299.0" layoutY="741.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Sandwiches.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="oth0add" layoutX="127.0" layoutY="950.0" mnemonicParsing="false" onAction="#addOne" prefHeight="30.0" prefWidth="40.0" style="-fx-border-color: sienna; -fx-border-width: 2;" text="+" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="oth0remove" layoutX="180.0" layoutY="950.0" mnemonicParsing="false" onAction="#removeOne" prefHeight="30.0" prefWidth="40.0" style="-fx-border-color: sienna; -fx-border-width: 2;" text="−" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="63.0" layoutY="922.0" text="Strawberry Smoothie $130" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="oth1add" layoutX="340.0" layoutY="946.0" mnemonicParsing="false" onAction="#addOne" prefHeight="30.0" prefWidth="40.0" style="-fx-border-color: sienna; -fx-border-width: 2;" text="+" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="oth1remove" layoutX="393.0" layoutY="946.0" mnemonicParsing="false" onAction="#removeOne" prefHeight="30.0" prefWidth="40.0" style="-fx-border-color: sienna; -fx-border-width: 2;" text="−" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="313.0" layoutY="922.0" text="Sandwiches $150" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="oth2add" layoutX="563.0" layoutY="946.0" mnemonicParsing="false" onAction="#addOne" prefHeight="30.0" prefWidth="40.0" style="-fx-border-color: sienna; -fx-border-width: 2;" text="+" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="oth2remove" layoutX="616.0" layoutY="946.0" mnemonicParsing="false" onAction="#removeOne" prefHeight="30.0" prefWidth="40.0" style="-fx-border-color: sienna; -fx-border-width: 2;" text="−" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate Bold" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="533.0" layoutY="922.0" text="Carrot Cake $210" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1018.0" layoutY="614.0" text="Payment Method">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="paymtdBox" layoutX="1020.0" layoutY="642.0" prefHeight="31.0" prefWidth="135.0" style="-fx-border-width: 2; -fx-border-color: saddlebrown;" />
+      <Label layoutX="1064.0" layoutY="486.0" text="Name">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="1019.0" layoutY="510.0" prefHeight="27.0" prefWidth="135.0" promptText="Type Here" style="-fx-border-color: saddlebrown; -fx-border-width: 2; -fx-background-color: beige;">
+         <font>
+            <Font name="Copperplate" size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="1025.0" layoutY="550.0" text="Telephone No.">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="noField" layoutX="1020.0" layoutY="576.0" prefHeight="27.0" prefWidth="135.0" promptText="Type Here" style="-fx-border-color: saddlebrown; -fx-border-width: 2; -fx-background-color: beige;">
+         <font>
+            <Font name="Copperplate" size="13.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="displayInfo" editable="false" layoutX="789.0" layoutY="830.0" mouseTransparent="true" prefHeight="150.0" prefWidth="215.0" promptText="Shows Here After  &quot;Confirm&quot;" style="-fx-border-color: saddlebrown; -fx-border-width: 2;">
+         <font>
+            <Font name="Copperplate Light" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </TextArea>
+      <Button fx:id="payBtn" layoutX="1022.0" layoutY="945.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="135.0" style="-fx-border-width: 2; -fx-border-color: saddlebrown;" text="Pay">
+         <font>
+            <Font name="Copperplate" size="18.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="displayCart" editable="false" focusTraversable="false" layoutX="787.0" layoutY="509.0" prefHeight="259.0" prefWidth="215.0" promptText="Shows Here" style="-fx-border-color: SADDLEBROWN; -fx-border-width: 2;">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <font>
+            <Font name="Copperplate Light" size="15.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="789.0" layoutY="486.0" text="Shopping Cart" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <Line endX="300.0" layoutX="863.0" layoutY="472.0" startX="-100.0" stroke="SADDLEBROWN" strokeWidth="5.0" />
+      <Line endX="300.0" layoutX="871.0" layoutY="792.0" startX="-100.0" stroke="SADDLEBROWN" strokeWidth="5.0" />
+      <Label layoutX="789.0" layoutY="806.0" text="Order Information" textFill="#6d3c1e">
+         <font>
+            <Font name="Copperplate" size="17.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="133.0" fitWidth="102.0" layoutX="1050.0" layoutY="810.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Cup.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
